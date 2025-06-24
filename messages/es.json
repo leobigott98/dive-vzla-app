@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "BUCEA",
+    "tagline": "Sumérgete, respira y siente cómo el mar te transforma",
+    "sub": "Con aguas cálidas, cristalinas y llenas de vida, Venezuela también se encuentra en las profundidades",
+    "login": "Iniciar Sesión",
+    "toggle": "EN / ES"
+  },
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "dive": "Bucear en Venezuela",
+    "directory": "Directorio",
+    "register": "Regístrate",
+    "expo": "Expo Dive",
+    "contact": "Contacto"
+  },
+  "discount": {
+    "headline1": "SOLO POR HOY",
+    "headline2": "10% DE DESCUENTO EN",
+    "headline3": "TODOS NUESTROS CURSOS"
+  },
+  "footer": {
+    "about": "Dive Venezuela es la puerta de entrada al mundo submarino venezolano. Somos la primera comunidad digital creada para buzos locales e internacionales que quieren explorar nuestros mares.",
+    "cta": "¡El azul te espera!",
+    "contact": "CONTACTO",
+    "links": "ENLACES",
+    "instagram": "INSTAGRAM",
+    "copyright": "© 2025 Dive Venezuela. Todos los derechos reservados."
+  },
+  "login": {
+  "name-label": "Nombres",
+  "lastname-label": "Apellidos",
+  "name-placeholder": "Nombres",
+  "lastname-placeholder": "Apellidos",
+  "email-label": "Correo Electrónico",
+  "email-placeholder": "ejemplo@email.com",
+  "country-label": "País",
+  "country-placeholder": "Elija un País",
+  "address-label": "Dirección",
+  "birthday-label": "Fecha de Nacimiento",
+  "birthday-placeholder": "DD/MM/YYYY",
+  "sex-label": "Sexo",
+  "password": "Contraseña",
+  "cancel": "Cancelar",
+  "sign-up": "Registrarse",
+  "login": "Iniciar Sesión"
+}
+}
+

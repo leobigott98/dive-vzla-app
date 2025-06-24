@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "title": "DIVE",
+    "tagline": "Dive in, breathe, and feel how the sea transforms you",
+    "sub": "With warm, crystal-clear waters full of life, Venezuela is also found in the depths",
+    "login": "Log In",
+    "toggle": "ES / EN"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "dive": "Dive in Venezuela",
+    "directory": "Directory",
+    "register": "Sign Up",
+    "expo": "Expo Dive",
+    "contact": "Contact"
+  },
+  "discount": {
+    "headline1": "TODAY ONLY",
+    "headline2": "10% DISCOUNT ON",
+    "headline3": "ALL OUR COURSES"
+  },
+  "footer": {
+    "about": "Dive Venezuela is your gateway to Venezuela's underwater world. We are the first digital community for local and international divers exploring our seas.",
+    "cta": "The blue awaits!",
+    "contact": "CONTACT",
+    "links": "LINKS",
+    "instagram": "INSTAGRAM",
+    "copyright": "© 2025 Dive Venezuela. All rights reserved."
+  },
+  "login": {
+    "name-label": "First Name",
+    "lastname-label": "Last Name",
+    "name-placeholder": "First Name",
+    "lastname-placeholder": "Last Name",
+    "email-label": "Email",
+    "email-placeholder": "example@email.com",
+    "country-label": "Country",
+    "country-placeholder": "Choose a Country",
+    "address-label": "Address",
+    "birthday-label": "Birth Date",
+    "birthday-placeholder": "MM/DD/YYYY",
+    "sex-label": "Sex",
+    "password": "Password",
+    "cancel": "Cancel",
+    "sign-up": "Sign-up",
+    "login": "Log In"
+  }
+}
