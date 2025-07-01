@@ -1,131 +1,121 @@
-'use-client';
+"use client";
 
-import Link from 'next/link';
-/* import {
-  CheckIcon,
-  ClockIcon,
-  CurrencyDollarIcon,
-  UserCircleIcon,
-} from '@heroicons/react/24/outline'; */
-import { Button } from '@/app/components/buttom';
-/* import { createInvoice, State } from '@/app/lib/actions'; */
-/* import { useActionState } from 'react'; */
-import {useTranslations} from 'next-intl';
+import NextLink from "next/link";
+import {
+  Box,
+  Button,
+  Link,
+  Stack,
+  TextField,
+  Typography,
+} from "@mui/material";
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormControl from '@mui/material/FormControl';
+import IconButton from '@mui/material/IconButton';
+import { useState } from "react";
 
-export default function SignUpForm() {
- /*  const initialState: State = { message: null, errors: {} };
-  const [state, formAction] = useActionState(createInvoice, initialState); */
-  const t = useTranslations('login');
+export default function LoginForm () {
+  
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   return (
-    <form 
-        /* action={formAction} */
-    >
-      <div className="rounded-md bg-gray-50 p-4 md:p-6">
-        {/* Customer Name */}
-        {/* <div className="mb-4">
-          <label htmlFor="customer" className="mb-2 block text-sm font-medium">
-            {t('email-label')}
-          </label>
-          <div id="customer-error" aria-live="polite" aria-atomic="true">
-            {state.errors?.customerId &&
-              state.errors.customerId.map((error: string) => (
-                <p className="mt-2 text-sm text-red-500" key={error}>
-                  {error}
-                </p>
-              ))}
-          </div>
-        </div> */}
-
-        {/* Email */}
-        <div className="mb-4">
-          <label htmlFor="amount" className="mb-2 block text-sm font-medium">
-            {t('email-label')}
-          </label>
-          <div className="relative mt-2 rounded-md">
-            <div className="relative">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder={t('email-placeholder')}
-                className="peer block w-full rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500"
-                required
-              />
-              {/* <CurrencyDollarIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" /> */}
-            </div>
-          </div>
-        </div>
-
-        {/* Password */}
-        <div className="mb-4">
-          <label htmlFor="amount" className="mb-2 block text-sm font-medium">
-            {t('password')}
-          </label>
-          <div className="relative mt-2 rounded-md">
-            <div className="relative">
-              <input
-                id="password"
-                name="password"
-                type="password"
-                className="peer block w-full rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500"
-                required
-              />
-              {/* <CurrencyDollarIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" /> */}
-            </div>
-          </div>
-        </div>
-
-        {/* Invoice Status */}
-       {/*  <fieldset>
-          <legend className="mb-2 block text-sm font-medium">
-            Estatus de la orden
-          </legend>
-          <div className="rounded-md border border-gray-200 bg-white px-[14px] py-3">
-            <div className="flex gap-4">
-              <div className="flex items-center">
-                <input
-                  id="pending"
-                  name="status"
-                  type="radio"
-                  value="pending"
-                  className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
-                />
-                <label
-                  htmlFor="pending"
-                  className="ml-2 flex cursor-pointer items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-600"
-                >
-                  Pendiente <ClockIcon className="h-4 w-4" />
-                </label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  id="paid"
-                  name="status"
-                  type="radio"
-                  value="paid"
-                  className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
-                />
-                <label
-                  htmlFor="paid"
-                  className="ml-2 flex cursor-pointer items-center gap-1.5 rounded-full bg-green-500 px-3 py-1.5 text-xs font-medium text-white"
-                >
-                  Pagado <CheckIcon className="h-4 w-4" />
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset> */}
-      </div>
-      <div className="mt-6 flex justify-center gap-4">
-        <Link
-          href="/"
-          className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-200"
+    <div>
+      <Box
+        /* sx={{
+          backgroundColor: "background.paper",
+          flex: "1 1 auto",
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
+        }} */
+      >
+{/*         <GeneralErrorModal 
+          opened={error} 
+          setOpened={setError} 
+          message={message}/> */}
+        <Box
+          sx={{
+            //maxWidth: 550,
+            px: 3,
+            py: "100px",
+            width: "100%",
+          }}
         >
-          {t('cancel')}
-        </Link>
-        <Button type="submit">{t('sign-up')}</Button>
-      </div>
-    </form>
+          <div>
+            <Stack spacing={1} sx={{ mb: 3 }}>
+              <Typography variant="h4">Inicio de Sesión</Typography>
+              <Typography color="text.secondary" variant="body2">
+                ¿No tienes cuenta? &nbsp;
+                <Link
+                  component={NextLink}
+                  href="/auth/register"
+                  underline="hover"
+                  variant="subtitle2"
+                >
+                  Regístrate
+                </Link>
+              </Typography>
+            </Stack>
+            <form noValidate>
+              <Stack spacing={3}>
+                <TextField
+                  fullWidth
+                  label="Email Address"
+                  name="email"
+                  type="email"
+                />
+                <FormControl  
+                  variant="filled"
+                  margin="none"
+                  >
+                  <InputLabel
+                   size="small"
+                    >
+                    Password
+                  </InputLabel>
+                  <OutlinedInput
+                    type={showPassword ? "text" : "password"}
+                    endAdornment={
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          edge="end"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    }
+                    label="Password"
+                    fullWidth
+                    name="password"
+                    //notched
+                  />
+                </FormControl>
+              </Stack>
+              <Typography color="text.secondary" variant="body2">
+                <Link
+                  component={NextLink}
+                  href="/auth/password-recovery"
+                  underline="hover"
+                  variant="subtitle2"
+                >
+                  Olvidé mi contraseña
+                </Link>
+              </Typography>
+              <Button fullWidth size="large" sx={{ mt: 3 }} type="submit" variant="contained">
+                Continuar
+              </Button>
+            </form>
+          </div>
+        </Box>
+      </Box>
+    </div>
   );
-}
+};

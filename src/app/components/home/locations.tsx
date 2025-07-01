@@ -1,5 +1,8 @@
-// components/Locations.tsx
+'use client';
+
 import Image from 'next/image';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const locations = [
   { src: '/images/locations/margarita.webp', title: 'Margarita', subtitle: 'EL CARIBE PROFUNDO TE LLAMA' },
@@ -8,9 +11,11 @@ const locations = [
 ];
 
 export default function Locations() {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+
   return (
-    <section className="px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+    <section className="px-4 py-8" ref={emblaRef}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 embla__container"  >
         {locations.map((loc, idx) => (
           <div key={idx} className="relative group overflow-hidden rounded-lg shadow-lg">
             <Image
@@ -20,7 +25,7 @@ export default function Locations() {
               height={300}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center text-white p-4">
+            <div className="absolute inset-0  flex flex-col justify-center items-center text-center text-white p-4">
               <h3 className="text-xl font-bold">{loc.title}</h3>
               <p className="text-sm">{loc.subtitle}</p>
             </div>

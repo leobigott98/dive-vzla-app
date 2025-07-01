@@ -62,7 +62,7 @@ export default function Hero() {
       </div>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-30 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
+      <div className="absolute bottom-30 left-1/2 transform -translate-x-1/2 z-50 flex gap-2">
         {images.map((_, i) => (
           <button
             key={i}
