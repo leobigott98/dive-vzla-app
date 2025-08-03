@@ -10,22 +10,22 @@ const sponsors = [
 
 export default function Sponsors() {
   return (
-    <section className="px-4 py-8 bg-white">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <section className="px-4 py-4 bg-white">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {sponsors.map((sponsor, idx) => (
           <a
             key={idx}
             href={sponsor.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${sponsor.main ? 'col-span-3' : ''} block hover:scale-105 transition-transform`}
+            className={`${sponsor.main ? 'col-span-3' : ''} relative group overflow-hidden rounded-lg shadow-lg`}
           >
             <Image
               src={sponsor.src}
               alt={`Sponsor ${idx}`}
               width={400}
               height={200}
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </a>
         ))}
