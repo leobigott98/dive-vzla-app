@@ -4,13 +4,13 @@ export default function DiscountBanner() {
     const t = useTranslations('discount');
 
   return (
-    <section className="relative w-full h-[160px] max-h-[160px] overflow-hidden my-4">
+    <section className="relative w-full h-[160px] max-h-[160px] overflow-hidden my-4 px-4 py-2">
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover relative group overflow-hidden rounded-lg "
       >
         <source src="/videos/diver.webm" type="video/webm" />
       </video>

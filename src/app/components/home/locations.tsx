@@ -15,9 +15,9 @@ export default function Locations() {
 
   return (
     <section className="px-4 py-4" ref={emblaRef}>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 embla__container"  >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4"  >
         {locations.map((loc, idx) => (
-          <div key={idx} className="relative group overflow-hidden rounded-lg shadow-lg embla__slide">
+          <div key={idx} className="relative group overflow-hidden rounded-lg shadow-lg col-span-1">
             <Image
               src={loc.src}
               alt={loc.title}
