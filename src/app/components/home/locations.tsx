@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
+//import Autoplay from 'embla-carousel-autoplay';
 
 const locations = [
   { src: '/images/locations/margarita.webp', title: 'MARGARITA', subtitle: 'EL CARIBE PROFUNDO TE LLAMA' },
@@ -11,7 +11,7 @@ const locations = [
 ];
 
 export default function Locations() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef] = useEmblaCarousel();
 
   return (
     <section className="px-4 py-4" ref={emblaRef}>

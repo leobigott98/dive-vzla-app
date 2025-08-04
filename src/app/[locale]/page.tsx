@@ -1,5 +1,5 @@
 import Hero from '@/app/components/home/hero';
-import Navbar from '@/app/components/home/navbar';
+//import Navbar from '@/app/components/home/navbar';
 import DiscountBanner from '@/app/components/home/discount-banner';
 import Locations from '@/app/components/home/locations';
 import InternationalLocations from '@/app/components/home/international-locations';
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Navbar />
+      {/* <Navbar /> */}
       <DiscountBanner />
       <Locations />
       <InternationalLocations />
