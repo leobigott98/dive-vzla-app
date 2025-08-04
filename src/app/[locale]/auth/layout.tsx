@@ -82,7 +82,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   variant="h1"
                 >
                   Bienvenido a{" "}
-                  <Box component="a" sx={{ color: "#f26524" }} target="_blank">
+                  <Box component="a" sx={{ color: "#f26524" }} href="/">
                     Dive Vzla
                   </Box>
                 </Typography>

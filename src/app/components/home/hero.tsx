@@ -67,8 +67,8 @@ export default function Hero() {
           <button
             key={i}
             className={clsx(
-              'w-3 h-3 rounded-full border border-yellow-300',
-              selectedIndex === i ? 'bg-yellow-300' : 'bg-transparent'
+              'w-3 h-3 rounded-full border border-[#eaff00]',
+              selectedIndex === i ? 'bg-[#eaff00]' : 'bg-transparent'
             )}
             onClick={() => emblaApi?.scrollTo(i)}
           />

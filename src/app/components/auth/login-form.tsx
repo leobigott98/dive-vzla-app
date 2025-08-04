@@ -54,7 +54,7 @@ export default function LoginForm () {
                 ¿No tienes cuenta? &nbsp;
                 <Link
                   component={NextLink}
-                  href="/auth/register"
+                  href="/auth/sign-up"
                   underline="hover"
                   variant="subtitle2"
                 >
