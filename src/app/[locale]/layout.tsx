@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import 'leaflet/dist/leaflet.css';
 
 export default async function RootLayout({
   children,

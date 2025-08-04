@@ -15,7 +15,7 @@ export default function Navbar() {
     },
     {
       text: t('dive'),
-      href: "#"
+      href: "/map"
     },
     {
       text: t('store'),
