@@ -1,0 +1,137 @@
+[
+  {
+    "id": "open-water",
+    "title": "Open Water Course",
+    "description": "Get certified to dive up to 18 meters. Perfect for beginners.",
+    "price": 1200000,
+    "currency": "ves",
+    "image": "/images/products/open-water.jpg",
+    "category": "course"
+  },
+  {
+    "id": "advanced-diver",
+    "title": "Advanced Diver Course",
+    "description": "Enhance your skills and dive deeper into underwater adventures.",
+    "price": 1800000,
+    "currency": "ves",
+    "image": "/images/products/advanced-diver.jpg",
+    "category": "course"
+  },
+  {
+    "id": "rescue-diver",
+    "title": "Rescue Diver Course",
+    "description": "Learn to prevent and manage diving emergencies.",
+    "price": 2200000,
+    "currency": "ves",
+    "image": "/images/products/rescue-diver.jpg",
+    "category": "course"
+  },
+  {
+    "id": "dive-trip-mochima",
+    "title": "Dive Trip: Mochima",
+    "description": "Weekend dive trip to the beautiful Mochima National Park.",
+    "price": 1000000,
+    "currency": "ves",
+    "image": "/images/products/mochima.jpg",
+    "category": "trip"
+  },
+  {
+    "id": "dive-trip-los-roques",
+    "title": "Dive Trip: Los Roques",
+    "description": "Explore the coral reefs of Los Roques in this 3-day adventure.",
+    "price": 2500000,
+    "currency": "ves",
+    "image": "/images/products/los-roques.jpg",
+    "category": "trip"
+  },
+  {
+    "id": "dive-trip-morrocoy",
+    "title": "Dive Trip: Morrocoy",
+    "description": "Dive among the vibrant reefs of Morrocoy.",
+    "price": 1400000,
+    "currency": "ves",
+    "image": "/images/products/morrocoy.jpg",
+    "category": "trip"
+  },
+  {
+    "id": "scuba-mask",
+    "title": "Scuba Diving Mask",
+    "description": "High-visibility tempered-glass diving mask.",
+    "price": 400000,
+    "currency": "ves",
+    "image": "/images/products/mask.jpg",
+    "category": "gear"
+  },
+  {
+    "id": "fins",
+    "title": "Diving Fins",
+    "description": "Flexible and powerful fins for all skill levels.",
+    "price": 500000,
+    "currency": "ves",
+    "image": "/images/products/fins.jpg",
+    "category": "gear"
+  },
+  {
+    "id": "wetsuit",
+    "title": "Full Wetsuit",
+    "description": "3mm neoprene wetsuit for tropical diving conditions.",
+    "price": 950000,
+    "currency": "ves",
+    "image": "/images/products/wetsuit.jpg",
+    "category": "gear"
+  },
+  {
+    "id": "dive-computer",
+    "title": "Dive Computer",
+    "description": "Track your depth, time, and NDLs with this compact device.",
+    "price": 3000000,
+    "currency": "ves",
+    "image": "/images/products/dive-computer.jpg",
+    "category": "gear"
+  },
+  {
+    "id": "snorkel-set",
+    "title": "Snorkel Set",
+    "description": "Perfect for shallow-water snorkeling or surface swimming.",
+    "price": 200000,
+    "currency": "ves",
+    "image": "/images/products/snorkel.jpg",
+    "category": "gear"
+  },
+  {
+    "id": "buoyancy-control",
+    "title": "Buoyancy Control Device (BCD)",
+    "description": "Professional-grade jacket-style BCD for stability and comfort.",
+    "price": 2600000,
+    "currency": "ves",
+    "image": "/images/products/bcd.jpg",
+    "category": "gear"
+  },
+  {
+    "id": "nitrox-course",
+    "title": "Enriched Air (Nitrox) Course",
+    "description": "Learn to dive with Enriched Air for longer bottom times.",
+    "price": 1500000,
+    "currency": "ves",
+    "image": "/images/products/nitrox.jpg",
+    "category": "course"
+  },
+  {
+    "id": "divemaster",
+    "title": "Divemaster Program",
+    "description": "Start your professional diving career with this leadership course.",
+    "price": 3500000,
+    "currency": "ves",
+    "image": "/images/products/divemaster.jpg",
+    "category": "course"
+  },
+  {
+    "id": "underwater-camera",
+    "title": "Underwater Action Camera",
+    "description": "Capture stunning footage of your underwater adventures.",
+    "price": 1800000,
+    "currency": "ves",
+    "image": "/images/products/camera.jpg",
+    "category": "gear"
+  }
+]

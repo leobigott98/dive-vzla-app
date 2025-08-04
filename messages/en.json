@@ -45,5 +45,9 @@
     "cancel": "Cancel",
     "sign-up": "Sign-up",
     "login": "Log In"
-  }
+  },
+  "shop": {
+  "title": "Dive Shop",
+  "buy": "Buy Now"
+}
 }

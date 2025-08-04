@@ -6,7 +6,6 @@ import InternationalLocations from '@/app/components/home/international-location
 import Sponsors from '@/app/components/home/sponsors';
 import Testimonials from '@/app/components/home/testimonials';
 import Footer from '@/app/components/home/footer';
-import Podcast from '../components/home/podcast';
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
       <InternationalLocations />
       <Sponsors />
       <Testimonials />
-      <Podcast />
       <Footer />
     </main>
   );

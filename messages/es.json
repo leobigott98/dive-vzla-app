@@ -45,6 +45,10 @@
   "cancel": "Cancelar",
   "sign-up": "Registrarse",
   "login": "Iniciar Sesión"
+},
+"shop": {
+  "title": "Tienda de Buceo",
+  "buy": "Comprar"
 }
 }
 

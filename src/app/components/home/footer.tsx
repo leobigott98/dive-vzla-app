@@ -6,7 +6,7 @@ export default function Footer() {
     const t = useTranslations('footer');
 
   return (
-    <footer className="bg-blue-900 text-white py-10 px-4">
+    <footer className="bg-[#003675] text-white pt-0 pb-10 px-4 relative">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
         <div>
           <Image src="/logo.png" alt="Dive Venezuela" width={100} height={100} className="mb-2" />
