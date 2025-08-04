@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "leaflet/dist/leaflet.css";
 import Navbar from "@/app/components/home/navbar"; // Adjust path as needed
+import { Analytics } from "@vercel/analytics/next"
 
 export default async function RootLayout({
   children,
@@ -26,6 +27,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <Navbar />
           {children}
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
