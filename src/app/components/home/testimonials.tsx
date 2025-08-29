@@ -129,13 +129,13 @@ export default function Testimonials() {
         </div>
       </div>
       <Podcast />
-      <div className="h-80">
+      <div className="pt-10 w-full">
         <Image
           src="/images/icons/wave.webp"
           alt="wave"
           width={1920}
-          height={100}
-          className="absolute -bottom-1"
+          height={1080}
+          className="relative -bottom-1 w-full sm:h-12 md:h-24 lg:h-48"
         />
       </div>
     </section>

@@ -35,7 +35,7 @@ export default function InternationalLocations() {
               {idx % 3 == 0 ? (
                 <div
                   key={idx}
-                  className="relative group overflow-hidden rounded-lg shadow-lg col-span-2 row-span-2"
+                  className="relative group overflow-hidden rounded-lg shadow-lg sm:col-span-1 sm:row-span-1 md:col-span-2 md:row-span-2"
                 >
                   <Image
                     src={loc.src}
@@ -52,7 +52,7 @@ export default function InternationalLocations() {
               ) : (
                 <div
                   key={idx}
-                  className="relative group overflow-hidden rounded-lg shadow-lg row-span-1"
+                  className="relative group overflow-hidden rounded-lg shadow-lg sm:col-span-1 sm:row-span-1 md:row-span-1"
                 >
                   <Image
                     src={loc.src}

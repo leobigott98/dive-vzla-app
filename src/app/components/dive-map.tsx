@@ -18,9 +18,13 @@ export default function DiveMap() {
         scrollWheelZoom={true}
         style={{ height: "500px", width: "100%" }}
       >
-        <TileLayer
+        {/* <TileLayer
           attribution='&copy; <a href="https://carto.com/">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        /> */}
+        <TileLayer
+          url="https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
         />
         {/* <TileLayer
           attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'

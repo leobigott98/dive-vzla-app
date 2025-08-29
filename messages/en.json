@@ -1,11 +1,28 @@
 {
   "hero": {
-    "title": "DIVE",
-    "tagline": "Dive in, breathe, and feel how the sea transforms you",
-    "sub": "With warm, crystal-clear waters full of life, Venezuela is also found in the depths",
-    "login": "Log In",
-    "toggle": "ES / EN"
+  "slide1": {
+    "title": "THE STRENGTH OF A COMMUNITY THAT BREATHES UNDER THE SEA",
+    "tagline": "",
+    "sub": ""
   },
+  "slide2": {
+    "title": "DISCOVER",
+    "tagline": "Venezuela, where the blue runs deeper",
+    "sub": "Explore a vibrant coastline full of marine life, enchanting islands, and breathtaking landscapes"
+  },
+  "slide3": {
+    "title": "EXPLORE",
+    "tagline": "Every dive, a new face of the Caribbean",
+    "sub": "From the corals of Los Roques to the mysteries of forgotten shipwrecks, the Venezuelan sea invites you to explore with awakened senses and an open heart"
+  },
+  "slide4": {
+    "title": "DIVE",
+    "tagline": "Submerge, breathe, and feel how the sea transforms you",
+    "sub": "With warm, crystal-clear, and lively waters, Venezuela can also be found in its depths"
+  },
+  "login": "Log In",
+  "toggle": "EN / ES"
+},
   "navbar": {
     "home": "Home",
     "about": "About Us",

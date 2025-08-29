@@ -58,7 +58,7 @@ export default function Navbar() {
           "fixed z-50 transition-all duration-300 px-4 w-full md:w-auto max-w-7xl mx-auto",
           {
             // Home & not scrolled = bottom nav
-            "bottom-4 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md rounded-full shadow-md":
+            "md:bottom-4 left-1/2 -translate-x-1/2":
               isHome && !scrolled,
             // Scrolled or not home = top nav
             "top-0 left-0 bg-white/10 backdrop-blur-md rounded-full shadow-md": !isHome || scrolled,

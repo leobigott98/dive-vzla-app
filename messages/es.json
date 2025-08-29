@@ -1,8 +1,25 @@
 {
   "hero": {
-    "title": "BUCEA",
-    "tagline": "Sumérgete, respira y siente cómo el mar te transforma",
-    "sub": "Con aguas cálidas, cristalinas y llenas de vida, Venezuela también se encuentra en las profundidades",
+    "slide1": {
+      "title": "LA FUERZA DE UNA COMUNIDAD QUE RESPIRA BAJO EL MAR",
+      "tagline": "",
+      "sub": ""
+    },
+    "slide2": {
+      "title": "CONOCE",
+      "tagline": "Venezuela, donde el azul se siente más profundo",
+      "sub": "Descubre un litoral vibrante, cargado de vida marina, islas encantadas y paisajes que te roban el aliento"
+    },
+    "slide3": {
+      "title": "EXPLORA",
+      "tagline": "Cada inmersión, una nueva cara del Caribe",
+      "sub": "Desde los corales de Los Roques hasta los misterios de naufragios olvidados, el mar venezolano te invita a explorar con los sentidos despiertos y el corazón abierto"
+    },
+    "slide4": {
+      "title": "BUCEA",
+      "tagline": "Sumérgete, respira y siente cómo el mar te transforma",
+      "sub": "Con aguas cálidas, cristalinas y llenas de vida, Venezuela también se encuentra en las profundidades"
+    },
     "login": "Iniciar Sesión",
     "toggle": "EN / ES"
   },

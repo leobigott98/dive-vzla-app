@@ -18,7 +18,7 @@ export default function Sponsors() {
             href={sponsor.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${sponsor.main ? 'col-span-3' : ''} relative group overflow-hidden rounded-lg shadow-lg`}
+            className={`${sponsor.main ? 'md:col-span-3' : ''} relative group overflow-hidden rounded-lg shadow-lg`}
           >
             <Image
               src={sponsor.src}
