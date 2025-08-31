@@ -1,10 +1,26 @@
 .embla {
   overflow: hidden;
+  position: relative;
 }
+
 .embla__container {
   display: flex;
+  gap: 1rem;            /* Tailwind gap-4 = 1rem */
+  /* optional: align-items center if needed */
+  align-items: flex-start;
 }
+
 .embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
+  flex: 0 0 100%;       /* mobile: full width */
+  min-width: 0;         /* prevents overflow issues in flex items */
+  box-sizing: border-box; /* so padding/border don't add to width */
 }
+
+/* Desktop: account for the two gaps between three slides:
+   flex-basis = calc(33.333333% - 0.666667rem)  */
+@media (min-width: 768px) {
+  .embla__slide {
+    flex: 0 0 calc(33.333333% - 0.666667rem);
+  }
+}
+
