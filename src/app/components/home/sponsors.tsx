@@ -5,6 +5,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import styles from "./Locations.module.css";
+import { useEffect, useCallback } from "react";
 
 const sponsors = [
   {
@@ -54,12 +55,34 @@ export default function Sponsors() {
     ]
   );
 
+  
+  const scrollPrev = useCallback(() => {
+    if(emblaApi) {
+      emblaApi.plugins().autoplay.stop();
+      emblaApi.scrollPrev();
+      emblaApi.plugins().autoplay.reset();
+    }  
+  }, [emblaApi]);
+  const scrollNext = useCallback(() => {
+    if(emblaApi) {
+      emblaApi.plugins().autoplay.stop();
+      emblaApi.scrollNext();
+      emblaApi.plugins().autoplay.reset();
+    }
+    }, [emblaApi]);
+  
+    useEffect(() => {
+      if (emblaApi) {
+        emblaApi.reInit();
+      }
+    }, [emblaApi]);
+
   return (
     <section >
       <div className={`px-4 py-4 ${styles.embla}`}>
       <div
         className="absolute z-1 -translate-y-1/2 top-1/2"
-        onClick={() => emblaApi?.scrollPrev()}
+        onClick={scrollPrev}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +122,7 @@ export default function Sponsors() {
       </div>
       <div
         className="absolute z-1 right-1 -translate-1/2 top-1/2"
-        onClick={() => emblaApi?.scrollNext()}
+        onClick={scrollNext}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

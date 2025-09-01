@@ -5,6 +5,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import styles from "./Locations.module.css";
+import { useEffect, useCallback } from "react";
 
 const locations = [
   {
@@ -55,10 +56,31 @@ export default function Locations() {
     ]
   );
 
+  const scrollPrev = useCallback(() => {
+    if(emblaApi) {
+      emblaApi.plugins().autoplay.stop();
+      emblaApi.scrollPrev();
+      emblaApi.plugins().autoplay.reset();
+    }  
+  }, [emblaApi]);
+  const scrollNext = useCallback(() => {
+    if(emblaApi) {
+      emblaApi.plugins().autoplay.stop();
+      emblaApi.scrollNext();
+      emblaApi.plugins().autoplay.reset();
+    }
+    }, [emblaApi]);
+
+  useEffect(() => {
+    if (emblaApi) {
+      emblaApi.reInit();
+    }
+  }, [emblaApi]);
+
   return (
     <section className={`px-4 py-4 ${styles.embla}`}>
       {/* Viewport */}
-      <div className="absolute z-1 -translate-y-1/2 top-1/2" onClick={()=> emblaApi?.scrollPrev()}>
+      <div className="absolute z-1 -translate-y-1/2 top-1/2" onClick={scrollPrev}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={5} stroke="currentColor" className="size-10 hover:stroke-white transition-transform duration-300 hover:scale-120">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
@@ -89,7 +111,7 @@ export default function Locations() {
           ))}
         </div>
       </div>
-      <div className="absolute z-1 right-1 -translate-1/2 top-1/2" onClick={()=> emblaApi?.scrollNext()}>
+      <div className="absolute z-1 right-1 -translate-1/2 top-1/2" onClick={scrollNext}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={5} stroke="currentColor" className="size-10 transition-transform duration-300 hover:scale-120 hover:stroke-white">
             <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>

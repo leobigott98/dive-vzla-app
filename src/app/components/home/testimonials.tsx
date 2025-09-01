@@ -23,6 +23,21 @@ const testimonials = [
     text: "Lo mejor es que no solo compartimos spots, sino consejos, historias y fotos brutales. Es más que una página, es una familia bajo el agua.",
     photo: "/images/testimonials/testimonio_3.png",
   },
+  {
+    name: "CARLA MENDOZA",
+    text: "Desde que descubrí esta comunidad, he conocido lugares increíbles para bucear que ni sabía que existían en Venezuela. ¡La buena vibra aquí es contagiosa!",
+    photo: "/images/testimonials/testimonio_1.png",
+  },
+  {
+    name: "LUIS ROJAS",
+    text: "Siempre buceé solo, pero gracias a esta página he conectado con otros apasionados como yo. Ahora no me pierdo ni una inmersión grupal.",
+    photo: "/images/testimonials/testimonio_2.png",
+  },
+  {
+    name: "ANDREA VELÁSQUEZ",
+    text: "Lo mejor es que no solo compartimos spots, sino consejos, historias y fotos brutales. Es más que una página, es una familia bajo el agua.",
+    photo: "/images/testimonials/testimonio_3.png",
+  },
 ];
 
 type Testimonial = {
