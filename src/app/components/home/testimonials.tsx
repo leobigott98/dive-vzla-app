@@ -6,6 +6,7 @@ import { useEffect, useState, useCallback } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import Podcast from "./podcast";
 import { clsx } from "clsx";
+import styles from "./Locations.module.css";
 
 const testimonials = [
   {
@@ -47,28 +48,53 @@ type Testimonial = {
 };
 
 export default function Testimonials() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+      {
+        loop: false,
+        align: "start",
+        containScroll: "trimSnaps",
+      },
+      [
+        Autoplay({
+          delay: 4000,
+          stopOnMouseEnter: true,
+          stopOnInteraction: false,
+        }),
+      ]
+    );
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const updateButtons = useCallback(() => {
-    if (!emblaApi) return;
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
+    const scrollPrev = useCallback(() => {
+      if(emblaApi) {
+        emblaApi.plugins().autoplay.stop();
+        emblaApi.scrollPrev();
+        emblaApi.plugins().autoplay.reset();
+      }  
+    }, [emblaApi]);
+    const scrollNext = useCallback(() => {
+      if(emblaApi) {
+        emblaApi.plugins().autoplay.stop();
+        emblaApi.scrollNext();
+        emblaApi.plugins().autoplay.reset();
+      }
+      }, [emblaApi]);
+  
+    useEffect(() => {
+      if (emblaApi) {
+        emblaApi.reInit();
+      }
+    }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
 
     const onSelect = () => {
       setSelectedIndex(emblaApi.selectedScrollSnap());
-      updateButtons();
     };
 
     emblaApi.on("select", onSelect);
     onSelect(); // Set initial
-  }, [emblaApi, updateButtons]);
+  }, [emblaApi]);
 
   const paddedTestimonials: Partial<Testimonial>[] = [...testimonials];
 
@@ -77,11 +103,11 @@ export default function Testimonials() {
       className="relative pt-12 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/testimonials/background.webp')" }}
     >
-      <div className="max-w-7xl mx-auto relative">
+      <div className={`max-w-7xl mx-auto relative ${styles.embla}`}>
         {/* Arrows */}
         <button
-          onClick={() => emblaApi?.scrollPrev()}
-          disabled={!canScrollPrev}
+          onClick={scrollPrev}
+          //disabled={!canScrollPrev}
           className="absolute top-1/2 -translate-y-1/2 left-0 z-10 p-2"
         >
           <Image
@@ -93,8 +119,8 @@ export default function Testimonials() {
         </button>
 
         <button
-          onClick={() => emblaApi?.scrollNext()}
-          disabled={!canScrollNext}
+          onClick={scrollNext}
+          //disabled={!canScrollNext}
           className="absolute top-1/2 -translate-y-1/2 right-0 z-10  p-2 "
         >
           <Image
@@ -106,8 +132,8 @@ export default function Testimonials() {
         </button>
 
         {/* Carousel */}
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-4 justify-center embla__container">
+        <div ref={emblaRef}>
+          <div className={`${styles.embla__container}`}>
             {paddedTestimonials.map((t, idx) => {
               const isActive = idx === selectedIndex;
 
@@ -115,7 +141,7 @@ export default function Testimonials() {
                 <div
                   key={idx}
                   className={clsx(
-                    "flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] transition-transform duration-500 p-4",
+                    `flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33%] transition-transform duration-500 p-4 embla__slide ${styles.embla__slide}`,
                     isActive ? "scale-105 z-10" : "scale-95 opacity-70"
                   )}
                 >
