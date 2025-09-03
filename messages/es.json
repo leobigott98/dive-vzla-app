@@ -1,8 +1,8 @@
 {
   "hero": {
     "slide1": {
-      "title": "LA FUERZA DE UNA COMUNIDAD QUE RESPIRA BAJO EL MAR",
-      "tagline": "",
+      "title": "",
+      "tagline": "LA FUERZA DE UNA COMUNIDAD QUE RESPIRA BAJO EL MAR",
       "sub": ""
     },
     "slide2": {
@@ -21,7 +21,7 @@
       "sub": "Con aguas cálidas, cristalinas y llenas de vida, Venezuela también se encuentra en las profundidades"
     },
     "login": "Iniciar Sesión",
-    "toggle": "EN / ES"
+    "toggle": "ES / EN"
   },
   "navbar": {
     "home": "Inicio",

@@ -1,8 +1,8 @@
 {
   "hero": {
   "slide1": {
-    "title": "THE STRENGTH OF A COMMUNITY THAT BREATHES UNDER THE SEA",
-    "tagline": "",
+    "title": "",
+    "tagline": "THE STRENGTH OF A COMMUNITY THAT BREATHES UNDER THE SEA",
     "sub": ""
   },
   "slide2": {
@@ -21,7 +21,7 @@
     "sub": "With warm, crystal-clear, and lively waters, Venezuela can also be found in its depths"
   },
   "login": "Log In",
-  "toggle": "EN / ES"
+  "toggle": "ES / EN"
 },
   "navbar": {
     "home": "Home",

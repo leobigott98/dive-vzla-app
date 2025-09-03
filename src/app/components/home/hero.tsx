@@ -30,14 +30,14 @@ export default function Hero() {
       title: t('slide2.title'),
       tagline: t('slide2.tagline'),
       sub: t('slide2.sub'),
-      buzo: '/icons/lupa.png'
+      buzo: '/icons/mundo.png'
     },
     {
       src: '/images/header/banner_03.webp',
       title: t('slide3.title'),
       tagline: t('slide3.tagline'),
       sub: t('slide3.sub'),
-      buzo: '/icons/mundo.png'
+      buzo: '/icons/lupa.png'
     },
     {
       src: '/images/header/banner_04.webp',
@@ -47,6 +47,34 @@ export default function Hero() {
       buzo: '/icons/buzo.png'
     }
   ];
+
+  const socialIcons = [
+    {
+      title: 'facebook',
+      src: '/icons/social/facebook.png',
+      href: 'https://www.facebook.com/'
+    },
+    {
+      title: 'instagram',
+      src: '/icons/social/instagram.png',
+      href: 'https://www.instagram.com/'
+    },
+    {
+      title: 'facebook',
+      src: '/icons/social/tiktok.png',
+      href: 'https://www.tiktok.com/'
+    },
+    {
+      title: 'whatsapp',
+      src: '/icons/social/whatsapp.png',
+      href: 'https://www.whatsapp.com/'
+    },
+    {
+      title: 'youtube',
+      src: '/icons/social/youtube.png',
+      href: 'https://www.youtube.com/'
+    },
+  ]
 
   const toggleLocale = () => {
     const newLocale = locale === 'es' ? 'en' : 'es';
@@ -109,29 +137,72 @@ export default function Hero() {
           alt="Dive Venezuela"
           width={240}
           height={240}
-          className={`mb-4 ${!currentSlide.buzo? 'sm:w-0.5 sm:h-0.5 md:w-62 md:h-24' : ''} mb-4`}
+          className={clsx(!currentSlide.buzo? 'w-2/3 md:w-1/3 h-auto mb-4': 'w-1/3 md:w-1/8 absolute top-1/8')}
         />
-        <h1 className={`${currentSlide.buzo? 'text-5xl' : 'text 2xl'} sm:text-7xl font-bold flex items-center gap-3`}>
-          {currentSlide.buzo? (
-            <Image src={currentSlide.buzo} alt="Buzo" width={64} height={64} />
-          ): (<></>)}
-          {currentSlide.title}
-        </h1>
-        <p className="text-xl mt-4">{currentSlide.tagline}</p>
-        <p className="text-sm mt-2 text-gray-200 max-w-xl">
-          {currentSlide.sub}
-        </p>
+        <div className={clsx(`flex flex-col items-center justify-center text-center`, currentSlide.buzo? `md:absolute md:right-0 md:bottom-1/4` : `md:text-left md:items-start md:justify-start`)}>
+          <h1 className={clsx(`text-5xl md:text-7xl font-extrabold flex items-center gap-3 md:text-left md:items-start md:justify-start md:w-lg`)}>
+            {currentSlide.buzo? (
+              <Image src={currentSlide.buzo} alt="Buzo" width={72} height={72} />
+            ): (<></>)}
+            {currentSlide.title}
+          </h1>
+          <p className={clsx("text-2xl md:text-3xl mt-4 font-extrabold", !currentSlide.buzo? '' : 'md:pr-4 md:text-left md:items-start md:justify-start md:w-lg')}>{currentSlide.tagline}</p>
+          <p className="text-sm mt-2 text-gray-200 max-w-xl md:pr-4 md:text-left md:items-start md:justify-start md:w-lg">
+            {currentSlide.sub}
+          </p>
+
+        </div>
+
+        <div className='hidden absolute top-10 left-1/2 -translate-1/2 md:flex gap-2'>
+          {socialIcons.map((socialIcon) => {
+            return(
+              <a
+                key={socialIcon.href}
+                href={socialIcon.href}
+                target='_blank'
+                rel="noopener noreferrer"  
+              >
+                <Image
+                  key={socialIcon.src}
+                  src={socialIcon.src}
+                  alt={`${socialIcon.title}_divevzla`}
+                  width={32}
+                  height={32}
+                  className='cursor-pointer'
+                />  
+              </a>
+              
+            )
+          })}
+
+
+        </div>
+        
         <div className="absolute top-4 right-4 flex gap-2">
           <button
             onClick={toggleLocale}
-            className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-blue-900 transition"
+            className="border bg-[#FFF] font-bold px-2 py-1 rounded-full text-sm hover:bg-[#eaff00] text-blue-900 transition cursor-pointer flex gap-2 items-center"
           >
+            <Image
+              src='/icons/ve-flag.png'
+              width={24}
+              height={12}
+              alt='Venezuelan flag'
+              className='hidden md:block'
+            />
             {t('toggle')}
+            <Image
+              src='/icons/us-flag.png'
+              width={24}
+              height={12}
+              alt='US flag'
+              className='hidden md:block'
+            />
           </button>
           <Link
             key="login"
             href="/auth/login"
-            className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-blue-900 transition"
+            className="border font-bold bg-[#eaff00] px-4 py-1 rounded-full text-sm hover:bg-white text-blue-900 transition flex items-center"
           >
             {t('login')}
           </Link>

@@ -125,7 +125,7 @@ export default function Navbar() {
                 scrolled ? "text-blue-900" : "text-white"
               }`}
             >
-              <ShoppingCart size={24} />
+              <ShoppingCart size={24} className="hover:stroke-[#eaff00]"/>
               {cart.items.length > 0 && (
                 <span className="absolute -top-1 -right-2 text-xs bg-[#eaff00] text-black rounded-full px-1">
                   {cart.items.length}
