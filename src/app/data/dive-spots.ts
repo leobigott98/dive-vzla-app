@@ -4,6 +4,7 @@ export type DiveSpot = {
   description: string;
   coordinates: [number, number]; // [lat, lng]
   images: string[];
+  providers?: string[];
 };
 
 export const diveSpots: DiveSpot[] = [

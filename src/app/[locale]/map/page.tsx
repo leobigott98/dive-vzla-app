@@ -1,10 +1,10 @@
-import DiveMap from "@/app/components/dive-map";
+import DiveMapLeaflet from "@/app/components/map/diveMapLeaflet";
 
 export default function DiveMapPage() {
   return (
-    <main className="max-w-6xl mx-auto p-4">
+    <main className="p-6">
       <h1 className="text-3xl font-bold mb-6">Mapa Interactivo de Buceo</h1>
-      <DiveMap />
+      <DiveMapLeaflet />
     </main>
   );
 }
