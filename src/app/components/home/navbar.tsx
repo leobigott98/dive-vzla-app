@@ -81,7 +81,7 @@ export default function Navbar() {
                 scrolled ? "text-blue-900" : "text-white"
               }`}
             >
-              Dive VZLA
+              
             </span>
           </Link>
           )}
