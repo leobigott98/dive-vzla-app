@@ -17,6 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isHome = pathname === "/" || pathname === "/en" || pathname === "/es";
+  const isAdmin = pathname === "/admin" || pathname === "/en/admin" || pathname === "/es/admin"
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ export default function Navbar() {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isHome]);
+  }, [isHome, isAdmin]);
 
   const links = [
     { text: t("home"), href: "/" },
@@ -59,15 +60,16 @@ export default function Navbar() {
           {
             // Home & not scrolled = bottom nav
             "md:bottom-4 left-1/2 -translate-x-1/2":
-              isHome && !scrolled,
+              (isHome || isAdmin) && !scrolled,
             // Scrolled or not home = top nav
             "top-0 left-0 bg-white/10 backdrop-blur-md rounded-full shadow-md": !isHome || scrolled,
+            "hidden": isAdmin
           }
         )}
       >
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           {/* Logo */}
-          {(scrolled || !isHome) && (
+          {(scrolled || !isAdmin) && (
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo.png"
